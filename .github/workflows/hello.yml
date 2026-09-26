@@ -10,5 +10,7 @@ jobs:
         steps:
           - run: echo "Hello, GitHub Actions!"
           - run: date
-          - run: exit 1
+          - name: something with an error
+            run: exit 1
+            continue-on-error: true
           - run: echo :Did I run?"
