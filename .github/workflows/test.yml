@@ -1,11 +1,23 @@
-name: checkout Test
+name: CI
 
 on: 
   push:
 
 jobs:
   test:
-    runs-on: ununtu-latest
-
+    runs-on: ubuntu-latest
     steps:
-      - run: ls
+      - run: echo "Testing"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building"
+
+  deploy:
+    needs:
+      - test
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying"
