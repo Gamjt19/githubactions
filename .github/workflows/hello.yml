@@ -8,5 +8,5 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - run: echo "Hello, GitHub Actions!"
+          - run: ech "Hello, GitHub Actions!"
           - run: date
