@@ -13,4 +13,4 @@ jobs:
           - name: something with an error
             run: exit 1
             continue-on-error: true
-          - run: echo :Did I run?"
+          - run: echo "Did I run?"
